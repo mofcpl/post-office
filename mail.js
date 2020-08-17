@@ -1,3 +1,5 @@
+const config = require('./config');
+
 nodeMailer = require('nodemailer');
 
 config = require('./config')
@@ -19,8 +21,8 @@ const sendMail = (name, sender, subject, msg) =>
 
     let mailOptions = 
     {
-        from: "test", // sender address
-        to: 'test', // list of receivers
+        from: config.host, // sender address
+        to: config.recipient, // list of receivers
         subject: `Message from postoffice: ${subject}`, // Subject line
         text:` 
             Name: ${name}
