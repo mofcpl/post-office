@@ -2,7 +2,6 @@ const config = require('./config');
 
 nodeMailer = require('nodemailer');
 
-config = require('./config')
 
 const sendMail = (name, sender, subject, msg) =>
 {
